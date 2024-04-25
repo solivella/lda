@@ -36,6 +36,10 @@ top.topic.documents(document_sums, num.documents = 20, alpha = 0.1)
   \item{num.documents}{
     For \code{top.topic.documents}, the number of top documents to return for each topic.
   }
+   \item{alpha}{
+    The scalar value of the Dirichlet hyperparameter for
+    topic proportions. 
+  }
   \item{by.score}{
     If \var{by.score} is set to \code{FALSE} (default), then words in
     each topic will
