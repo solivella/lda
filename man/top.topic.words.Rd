@@ -48,8 +48,6 @@ top.topic.documents(document_sums, num.documents = 20, alpha = 0.1)
     ranked according to a score defined by \eqn{\beta_{w, k} (\log
       \beta_{w,k} - 1 / K \sum_{k'} \log \beta_{w,k'})}.  
   }
-  \item{alpha}{
-  }
 }
 \value{
   For \code{top.topic.words}, a \eqn{num.words \times K} character matrix where each column contains
