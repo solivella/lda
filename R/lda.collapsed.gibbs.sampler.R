@@ -3,7 +3,7 @@ function (documents, K, vocab, num.iterations, alpha, eta, initial = NULL,
     burnin = NULL, compute.log.likelihood = FALSE, trace = 0L, 
     freeze.topics = FALSE) 
 {
-    if (class(vocab) == "list") {
+    if (is(vocab, "list")) {
         lengths <- as.integer(sapply(vocab, length))
         all.vocab <- do.call(c, vocab)
     }
@@ -11,7 +11,7 @@ function (documents, K, vocab, num.iterations, alpha, eta, initial = NULL,
         lengths <- as.integer(length(vocab))
         all.vocab <- vocab
     }
-    retval <- structure(.Call("collapsedGibbsSampler", documents, 
+    retval <- structure(.Call(.collapsedGibbsSampler, documents, 
         as.integer(K), lengths, as.integer(num.iterations), as.double(alpha), 
         as.double(eta), NULL, NULL, NULL, NULL, NULL, NULL, NULL, 
         initial, as.integer(burnin), as.logical(compute.log.likelihood), 
