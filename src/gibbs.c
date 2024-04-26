@@ -751,7 +751,7 @@ SEXP collapsedGibbsSampler(SEXP documents,
     SET_VECTOR_ELT(assignments, dd, allocVector(INTSXP, nw));
     SEXP zs = VECTOR_ELT(assignments, dd);
     if (!zs) {
-      error("Unable to allocate memory for document (%d) assignments", dd);
+      error("Unable to allocate memory for document (%ld) assignments", dd);
     }
 
     for (ww = 0; ww < nw; ++ww) {
