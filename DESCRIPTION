@@ -15,6 +15,6 @@ Description: Implements latent Dirichlet allocation (LDA)
 	     examining posterior distributions are also included.
 License: LGPL (>= 2.1)
 LazyLoad: yes
-Suggests: Matrix, reshape2, ggplot2 (>= 3.4.4), penalized, nnet
 Imports: methods (>= 4.3.0)
+Suggests: Matrix, reshape2, ggplot2 (>= 3.4.4), penalized, nnet
 Depends: R (>= 4.3.0)

@@ -7,4 +7,5 @@ export("concatenate.documents", "document.lengths", "filter.words",
        "slda.em", "slda.predict", "slda.predict.docsums",
        "top.topic.documents", "top.topic.words", "word.counts")
 importFrom("stats", "coef", "lm", "xtabs")
+importFrom("methods", "is")
 useDynLib(lda, .registration = TRUE)

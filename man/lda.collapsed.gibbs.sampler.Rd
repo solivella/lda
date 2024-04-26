@@ -24,7 +24,8 @@ eta, initial = NULL, burnin = NULL, compute.log.likelihood = FALSE,
 
 slda.em(documents, K, vocab, num.e.iterations, num.m.iterations, alpha,
 eta, annotations, params, variance, logistic = FALSE, lambda = 10,
-regularise = FALSE, method = "sLDA", trace = 0L, MaxNWts=3000)
+regularise = FALSE, method = "sLDA", trace = 0L, MaxNWts=3000, 
+initial = NULL)
 
 mmsb.collapsed.gibbs.sampler(network, K, num.iterations, alpha,
 beta.prior, initial = NULL, burnin = NULL, trace = 0L)
