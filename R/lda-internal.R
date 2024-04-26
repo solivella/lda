@@ -3,7 +3,7 @@ function (documents, K, vocab, num.iterations, alpha, eta, annotations,
     beta, variance, logistic = FALSE, method = "sLDA", lambda,
     initial = NULL, burnin = NULL, trace = 0L)
 {
-    retval <- structure(.Call(.collapsedGibbsSampler, documents,
+    retval <- structure(.Call("collapsedGibbsSampler", documents,
         as.integer(K), as.integer(length(vocab)), as.integer(num.iterations),
         as.double(alpha), as.double(eta),if (!logistic) as.double(annotations) else if (method=="sLDA" & logistic) as.integer(annotations) else as.logical(annotations),
         as.double(beta), as.double(variance), pmatch(method,
@@ -46,7 +46,7 @@ function (filename, vocab = NULL, num.topics = NULL, ignore.last.row = TRUE)
 function (documents, K, vocab, num.iterations, alpha, eta, nbeta,
     net.annotations, initial = NULL, burnin = NULL, trace = 0L)
 {
-    retval <- structure(.Call(.collapsedGibbsSampler, documents,
+    retval <- structure(.Call("collapsedGibbsSampler", documents,
         as.integer(K), as.integer(length(vocab)), as.integer(num.iterations),
         as.double(alpha), as.double(eta), NULL, NULL, NULL, NULL,
         NULL, nbeta, as.logical(net.annotations), initial, burnin,

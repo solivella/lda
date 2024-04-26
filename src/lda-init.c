@@ -1,18 +1,13 @@
 #include <R.h>
 #include <Rinternals.h>
-#include <stdlib.h> 
+#include <stdlib.h> // for NULL
 #include <R_ext/Rdynload.h>
 
-extern SEXP collapsedGibbsSampler(void *, void *, void *, void *, void *,
-                                  void *, void *, void *, void *, void *,
-                                  void *, void *, void *, void *, void *,
-                                  void *, void *, void *);
-extern SEXP cvb0(void *, void *, void *, void *, void *,
-                 void *, void *);
-extern SEXP nubbi(void *, void *, void *, void *, void *,
-                  void *, void *, void *, void *);
-extern SEXP rtm(void *, void *, void *, void *, void *,
-                void *, void *, void *, void *, void *);
+/* .Call calls */
+extern SEXP collapsedGibbsSampler(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP cvb0(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP nubbi(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP rtm(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
     {"collapsedGibbsSampler", (DL_FUNC) &collapsedGibbsSampler, 18},

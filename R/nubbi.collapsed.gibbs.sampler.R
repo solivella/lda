@@ -7,7 +7,7 @@ function (contexts, pair.contexts, pairs, K.individual, K.pair,
     sources <- c(as.list(0:(length(contexts) - 1)), mapply(c, 
         pair.sources[, 1], pair.sources[, 2], pair.sources[, 
             3], SIMPLIFY = FALSE))
-    retval <- structure(.Call(.nubbi, c(contexts, pair.contexts), 
+    retval <- structure(.Call("nubbi", c(contexts, pair.contexts), 
         sources, rep(0:1, c(length(contexts), length(pair.contexts))), 
         as.integer(c(K.individual, K.pair)), as.integer(length(vocab)), 
         as.integer(num.iterations), as.double(alpha), as.double(eta), 

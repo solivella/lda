@@ -1,7 +1,7 @@
 lda.cvb0 <- function(documents, K, vocab, num.iterations, alpha, eta, trace = 0L) {
     retval <- structure(
       .Call(
-        .cvb0, 
+        "cvb0", 
         documents, 
         as.integer(K), 
         as.integer(length(vocab)), 
